@@ -25,9 +25,8 @@ module SimpleMenus
       
       def to_s
         @items.last.last = true unless @items.empty?
-        @binding.content_tag(:div, @options) do
-          @binding.content_tag(:ul, @items)
-        end
+        tag_options = @binding.send :tag_options, @options
+        "<div #{tag_options}><ul>#{@items}</ul></div>"
       end
     end
     
@@ -46,7 +45,8 @@ module SimpleMenus
         @classes << 'last' if last
         @classes << 'current' if current
         @options[:class] = @classes.join(' ')
-        @binding.content_tag(:li, content, @options)
+        tag_options = @binding.send :tag_options, @options
+        "<li #{tag_options}>#{content}</li>"
       end
     end
     

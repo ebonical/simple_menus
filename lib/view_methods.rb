@@ -24,7 +24,7 @@ module SimpleMenus
       end
       
       def to_s
-        @items.last.last = true
+        @items.last.last = true unless @items.empty?
         @binding.content_tag(:div, @options) do
           @binding.content_tag(:ul, @items)
         end

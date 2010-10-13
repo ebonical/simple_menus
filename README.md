@@ -1,13 +1,13 @@
-SimpleMenus
-===========
+Simple Menus
+============
 
 Introduction goes here.
 
 
-Example
-=======
+Examples
+--------
 
 Example goes here.
 
 
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
+_Copyright (c) 2010 Ebony, released under the MIT license_

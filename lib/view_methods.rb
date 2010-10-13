@@ -50,10 +50,13 @@ module SimpleMenus
       end
     end
     
-    def menu(*args, &block)
+    # Insert a menu into your view
+    def simple_menu(*args, &block)
       menu = Menu.new(self, *args)
       yield(menu)
       concat(menu.to_s)
     end
+    alias_method :menu, :simple_menu
+    
   end
 end

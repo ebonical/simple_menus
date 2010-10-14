@@ -32,7 +32,7 @@ module SimpleMenus
       def to_s
         @items.last.last = true unless @items.empty?
         tag_options = @view.send :tag_options, @options
-        "<div#{tag_options}><ul>#{@items}</ul></div>"
+        "<div#{tag_options}><ul>#{@items.map(&:to_s).join}</ul></div>"
       end
     end
     
@@ -57,7 +57,7 @@ module SimpleMenus
         @classes << 'current' if current
         @options[:class] = @classes.join(' ')
         tag_options = @view.send :tag_options, @options
-        "<li#{tag_options}>#{content}#{sub_menus}</li>"
+        "<li#{tag_options}>#{content}#{sub_menus.map(&:to_s).join}</li>"
       end
     end
     

@@ -52,6 +52,7 @@ module SimpleMenus
       end
       
       def to_s
+        @classes << id.to_s
         @classes << 'first' if first
         @classes << 'last' if last
         @classes << 'current' if current

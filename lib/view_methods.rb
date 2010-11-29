@@ -10,7 +10,7 @@ module SimpleMenus
         @options[:id] = id.to_s if id
         @options[:class] << ' simple_menu'
         @items = []
-        @current_items = @view.instance_variable_get('@simple_menu_current_items')[id].dup rescue []
+        @current_items = @view.instance_variable_get('@simple_menu_current_items')[id].dup.map(&:to_sym) rescue []
       end
       
       def menu(*args, &block)

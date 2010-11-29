@@ -4,7 +4,7 @@ Simple Menus
 Installation
 ------------
 
-`./script/plugin install git@github.com:ebonical/simple_menus.git`
+`./script/plugin install git://github.com/ebonical/simple_menus.git`
 
 Examples
 --------
